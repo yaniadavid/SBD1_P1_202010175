@@ -1,224 +1,191 @@
--- Tabla 1: categoria
-CREATE TABLE categoria (
-    id         INTEGER  NOT NULL,
+-- Tabla 1: CATEGORIAS
+CREATE TABLE CATEGORIAS (
+    id         INTEGER       PRIMARY KEY,
     name       VARCHAR2(250) NOT NULL,
-    created_at DATE NOT NULL,
-    updated_at DATE NOT NULL,
-    CONSTRAINT categoria_PK PRIMARY KEY (id)
+    created_at TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
--- Tabla 2: clientes
-CREATE TABLE clientes (
-    id                INTEGER  NOT NULL,
-    national_document INTEGER  NOT NULL,
+-- Tabla 2: SEDES
+CREATE TABLE SEDES (
+    id         INTEGER       PRIMARY KEY,
+    name       VARCHAR2(250) NOT NULL,
+    created_at TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- Tabla 3: CLIENTES
+CREATE TABLE CLIENTES (
+    id                INTEGER       PRIMARY KEY,
+    national_document INTEGER       NOT NULL,
     name              VARCHAR2(250) NOT NULL,
     lastname          VARCHAR2(250) NOT NULL,
     email             VARCHAR2(300) NOT NULL,
-    phone             VARCHAR2(15) NOT NULL,
-    active            CHAR(1) NOT NULL,
-    confirrmed_email  CHAR(1),
-    address_id        VARCHAR2(300),
-    payment_method    VARCHAR2(200),
-    created_at        DATE NOT NULL,
-    updated_at        DATE NOT NULL,
-    CONSTRAINT clientes_PK PRIMARY KEY (id, national_document)
+    password          VARCHAR2(255) NOT NULL,
+    phone             VARCHAR2(15)  NOT NULL,
+    active            BOOLEAN       NOT NULL CHECK (active IN (0, 1)),
+    confirmed_email   BOOLEAN       NOT NULL CHECK (confirmed_email IN (0, 1)),
+    created_at        TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at        TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
--- Tabla 3: detalle_orden_de_compra
-CREATE TABLE detalle_orden_de_compra (
-    id                        INTEGER  NOT NULL,
-    order_id                  INTEGER  NOT NULL,
-    product_id                INTEGER  NOT NULL,
-    quantity                  INTEGER  NOT NULL,
-    price                     NUMBER  NOT NULL,
-    created_at                DATE NOT NULL,
-    updated_at                DATE NOT NULL,
-    orden_de_compra_id        INTEGER  NOT NULL,
-    orden_de_compra_client_id INTEGER  NOT NULL,
-    CONSTRAINT detalle_orden_de_compra_PK PRIMARY KEY (id, order_id)
-);
-
--- Tabla 4: Detalle_Traslado
-CREATE TABLE Detalle_Traslado (
-    id                 INTEGER  NOT NULL,
-    traslado_id        INTEGER  NOT NULL,
-    product_id         INTEGER,
-    quantity           INTEGER  NOT NULL,
-    created_at         DATE NOT NULL,
-    updated_at         DATE NOT NULL,
-    traslados_id       INTEGER  NOT NULL,
-    traslados_order_id INTEGER  NOT NULL,
-    CONSTRAINT Detalle_Traslado_PK PRIMARY KEY (id)
-);
-
--- Tabla 5: devolucion
-CREATE TABLE devolucion (
-    id             INTEGER  NOT NULL,
-    order_id       INTEGER  NOT NULL,
-    requested_date DATE NOT NULL,
-    reason         VARCHAR2(350) NOT NULL,
-    status         VARCHAR2(50) NOT NULL,
-    product_id     INTEGER  NOT NULL,
-    created_at     DATE NOT NULL,
-    updated_at     DATE NOT NULL,
-    inventario_id  INTEGER  NOT NULL,
-    CONSTRAINT devolucion_PK PRIMARY KEY (id, order_id)
-);
-
--- Tabla 6: direcciones
-CREATE TABLE direcciones (
-    id                         INTEGER  NOT NULL,
-    client_id                  INTEGER  NOT NULL,
-    address                    VARCHAR2(300) NOT NULL,
-    created_at                 DATE,
-    updated_at                 DATE NOT NULL,
-    clientes_id                INTEGER  NOT NULL,
-    clientes_national_document INTEGER  NOT NULL,
-    CONSTRAINT direcciones_PK PRIMARY KEY (id)
-);
-
--- Tabla 7: envios
-CREATE TABLE envios (
-    id                        INTEGER  NOT NULL,
-    order_id                  INTEGER  NOT NULL,
-    address                   VARCHAR2(300) NOT NULL,
-    transport_company         VARCHAR2(100) NOT NULL,
-    tracking_id               INTEGER  NOT NULL,
-    status                    VARCHAR2(30) NOT NULL,
-    created_at                DATE NOT NULL,
-    updated_at                DATE NOT NULL,
-    orden_de_compra_id        INTEGER  NOT NULL,
-    orden_de_compra_client_id INTEGER  NOT NULL,
-    CONSTRAINT envios_PK PRIMARY KEY (id, order_id)
-);
-
--- Tabla 8: imagen
-CREATE TABLE imagen (
-    id           INTEGER  NOT NULL,
-    product_id   INTEGER  NOT NULL,
-    imagen_url   VARCHAR2(300) NOT NULL,
-    created_at   DATE NOT NULL,
-    updated_at   DATE NOT NULL,
-    producto_id  INTEGER  NOT NULL,
-    producto_sku VARCHAR2(25) NOT NULL,
-    id3          INTEGER  NOT NULL,
-    order_id     INTEGER  NOT NULL,
-    CONSTRAINT imagen_PK PRIMARY KEY (id)
-);
-
--- Tabla 9: inventario
-CREATE TABLE inventario (
-    id          INTEGER  NOT NULL,
-    product_id  INTEGER  NOT NULL,
-    location_id INTEGER  NOT NULL,
-    quantity    INTEGER  NOT NULL,
-    created_at  DATE NOT NULL,
-    updated_at  DATE NOT NULL,
-    sede_id     INTEGER  NOT NULL,
-    sede_id2    INTEGER  NOT NULL,
-    CONSTRAINT inventario_PK PRIMARY KEY (id)
-);
-
--- Tabla 10: metodos_de_pago
-CREATE TABLE metodos_de_pago (
-    id                         INTEGER  NOT NULL,
-    client_id                  INTEGER,
-    payment_method             VARCHAR2(100) NOT NULL,
-    created_at                 DATE,
-    updated_at                 DATE NOT NULL,
-    clientes_id                INTEGER  NOT NULL,
-    clientes_national_document INTEGER  NOT NULL,
-    CONSTRAINT metodos_de_pago_PK PRIMARY KEY (id)
-);
-
--- Tabla 11: orden_de_compra
-CREATE TABLE orden_de_compra (
-    id                         INTEGER  NOT NULL,
-    client_id                  INTEGER  NOT NULL,
-    created_at                 DATE NOT NULL,
-    updated_at                 DATE NOT NULL,
-    clientes_id                INTEGER  NOT NULL,
-    clientes_national_document INTEGER  NOT NULL,
-    CONSTRAINT orden_de_compra_PK PRIMARY KEY (id, client_id)
-);
-
--- Tabla 12: pago
-CREATE TABLE pago (
-    id                        INTEGER  NOT NULL,
-    order_id                  INTEGER  NOT NULL,
-    mount                     NUMBER  NOT NULL,
-    payment_method            VARCHAR2(50) NOT NULL,
-    status                    VARCHAR2(50) NOT NULL,
-    updated_at                DATE NOT NULL,
-    created_at                DATE NOT NULL,
-    orden_de_compra_id        INTEGER  NOT NULL,
-    orden_de_compra_client_id INTEGER  NOT NULL,
-    CONSTRAINT pago_PK PRIMARY KEY (id, order_id)
-);
-
--- Tabla 13: producto
-CREATE TABLE producto (
-    id                               INTEGER  NOT NULL,
-    sku                              VARCHAR2(25) NOT NULL,
+-- Tabla 4: PRODUCTOS
+CREATE TABLE PRODUCTOS (
+    id                               INTEGER       PRIMARY KEY,
+    sku                              VARCHAR2(25)  NOT NULL,
     name                             VARCHAR2(250) NOT NULL,
     description                      VARCHAR2(500) NOT NULL,
-    price                            NUMBER NOT NULL,
+    price                            NUMBER        NOT NULL,
     slug                             VARCHAR2(100) NOT NULL,
-    sede                             INTEGER NOT NULL,
-    active                           CHAR(1) NOT NULL,
-    imagen_id                        VARCHAR2(300) NOT NULL,
-    created_at                       DATE NOT NULL,
-    updated_at                       DATE NOT NULL,
-    inventario_id                    INTEGER NOT NULL,
-    imagen_url                       VARCHAR2(350) NOT NULL,
-    categoria_id                     INTEGER NOT NULL,
-    detalle_orden_de_compra_id       INTEGER NOT NULL,
-    det_orden_order_id               INTEGER NOT NULL,  -- se optimizó el nombre (anteriormente excedía 30 caracteres)
-    CONSTRAINT producto_PK PRIMARY KEY (id, sku)
+    active                           CHAR(1)       NOT NULL,
+    category_id                      INTEGER       NOT NULL,
+    created_at                       TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at                       TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_category_id FOREIGN KEY (category_id) REFERENCES CATEGORIAS (id)
 );
 
--- Tabla 14: sede
-CREATE TABLE sede (
-    id         INTEGER NOT NULL,
-    name       VARCHAR2(250) NOT NULL,
-    created_at DATE NOT NULL,
-    updated_at DATE NOT NULL,
-    CONSTRAINT sede_PK PRIMARY KEY (id)
+-- Tabla 5: ORDENES_DE_COMPRA
+CREATE TABLE ORDENES_DE_COMPRA (
+    id                         INTEGER   PRIMARY KEY,
+    client_id                  INTEGER   NOT NULL,
+    location_id                INTEGER   NOT NULL,
+    created_at                 TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at                 TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_client_id FOREIGN KEY (client_id) REFERENCES CLIENTES (id),
+    CONSTRAINT fk_location_id FOREIGN KEY (location_id) REFERENCES SEDES (id)
 );
 
--- Tabla 15: trabajadores
-CREATE TABLE trabajadores (
-    id                INTEGER NOT NULL,
-    national_document INTEGER NOT NULL,
+-- Tabla 6: DIRECCIONES
+CREATE TABLE DIRECCIONES (
+    id                         INTEGER       PRIMARY KEY,
+    client_id                  INTEGER       NOT NULL,
+    address                    VARCHAR2(300) NOT NULL,
+    created_at                 TIMESTAMP     DEFAULT CURRENT_TIMESTAMP,
+    updated_at                 TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_client_address FOREIGN KEY (client_id) REFERENCES CLIENTES (id)
+);
+
+-- Tabla 7: INVENTARIOS
+CREATE TABLE INVENTARIOS (
+    id          INTEGER   PRIMARY KEY,
+    product_id  INTEGER   NOT NULL,
+    location_id INTEGER   NOT NULL,
+    quantity    INTEGER   NOT NULL,
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_product_inventory FOREIGN KEY (product_id) REFERENCES PRODUCTOS (id),
+    CONSTRAINT fk_location_inventory FOREIGN KEY (location_id) REFERENCES SEDES (id)
+);
+
+-- Tabla 8: DETALLE_ORDEN_COMPRA
+CREATE TABLE DETALLE_ORDEN_COMPRA (
+    id                        INTEGER   PRIMARY KEY,
+    order_id                  INTEGER   NOT NULL,
+    product_id                INTEGER   NOT NULL,
+    quantity                  INTEGER   NOT NULL,
+    price                     NUMBER    NOT NULL,
+    created_at                TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at                TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_order_detail FOREIGN KEY (order_id) REFERENCES ORDENES_DE_COMPRA (id),
+    CONSTRAINT fk_product_detail FOREIGN KEY (product_id) REFERENCES PRODUCTOS (id)
+);
+
+-- Tabla 9: METODOS_DE_PAGO
+CREATE TABLE METODOS_DE_PAGO (
+    id                         INTEGER       PRIMARY KEY,
+    client_id                  INTEGER,
+    payment_method             VARCHAR2(100) NOT NULL,
+    created_at                 TIMESTAMP     DEFAULT CURRENT_TIMESTAMP,
+    updated_at                 TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_client_method FOREIGN KEY (client_id) REFERENCES CLIENTES (id)
+);
+
+-- Tabla 10: PAGOS
+CREATE TABLE PAGOS (
+    id                        INTEGER   PRIMARY KEY,
+    order_id                  INTEGER   NOT NULL,
+    payment_method            VARCHAR2(50) NOT NULL,
+    status                    VARCHAR2(50) NOT NULL,
+    updated_at                TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    created_at                TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_order_payment FOREIGN KEY (order_id) REFERENCES ORDENES_DE_COMPRA (id)
+);
+
+-- Tabla 11: ENVIOS
+CREATE TABLE ENVIOS (
+    id                        INTEGER       PRIMARY KEY,
+    order_id                  INTEGER       NOT NULL,
+    address                   VARCHAR2(300) NOT NULL,
+    transport_company         VARCHAR2(100) NOT NULL,
+    tracking_id               INTEGER       NOT NULL,
+    status                    VARCHAR2(30)  NOT NULL,
+    delivered_at                TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    created_at                TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at                TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_order_ship FOREIGN KEY (order_id) REFERENCES ORDENES_DE_COMPRA (id)
+);
+
+-- Tabla 12: DEVOLUCIONES
+CREATE TABLE DEVOLUCIONES (
+    id             INTEGER   PRIMARY KEY,
+    requested_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    reason         VARCHAR2(350) NOT NULL,
+    status         VARCHAR2(50)  NOT NULL,
+    product_id     INTEGER   NOT NULL,
+    created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_product_devolucion FOREIGN KEY (product_id) REFERENCES PRODUCTOS (id)
+);
+
+-- Tabla 13: TRABAJADORES
+CREATE TABLE TRABAJADORES (
+    id                INTEGER       PRIMARY KEY,
+    national_document INTEGER       NOT NULL,
     name              VARCHAR2(250) NOT NULL,
     lastname          VARCHAR2(250) NOT NULL,
     job               VARCHAR2(250) NOT NULL,
-    departament       INTEGER NOT NULL,
-    phone             VARCHAR2(15) NOT NULL,
+    deparment          INTEGER       NOT NULL,
+    phone             VARCHAR2(15)  NOT NULL,
     email             VARCHAR2(300),
-    sede_id           INTEGER NOT NULL,
-    active            CHAR(1) NOT NULL,
-    created_at        DATE NOT NULL,
-    updated_at        DATE NOT NULL,
-    inventario_id     INTEGER NOT NULL,
-    sede_name         VARCHAR2(100) NOT NULL,
-    sede_id2          INTEGER NOT NULL,
-    CONSTRAINT trabajadores_PK PRIMARY KEY (id, national_document)
+    sede_id           INTEGER       NOT NULL,
+    active            BOOLEAN       NOT NULL CHECK (active IN (0, 1)),
+    created_at        TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at        TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_sede_employee FOREIGN KEY (sede_id) REFERENCES SEDES (id)
+
 );
 
--- Tabla 16: traslados
-CREATE TABLE traslados (
-    id             INTEGER NOT NULL,
-    order_id       INTEGER NOT NULL,
-    origin_id      INTEGER NOT NULL,
-    destination_id INTEGER,
-    products_id    INTEGER NOT NULL,
-    quantities     INTEGER NOT NULL,
-    requested_date DATE NOT NULL,
-    arrive_date    DATE NOT NULL,
-    created_at     DATE NOT NULL,
-    updated_at     DATE NOT NULL,
-    inventario_id  INTEGER NOT NULL,
-    status         VARCHAR2(50) NOT NULL,
-    CONSTRAINT traslados_PK PRIMARY KEY (id, order_id)
+-- Tabla 14: IMAGENES
+CREATE TABLE IMAGENES (
+    id           INTEGER       PRIMARY KEY,
+    product_id   INTEGER       NOT NULL,
+    imagen_url   VARCHAR2(300) NOT NULL,
+    created_at   TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at   TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+   CONSTRAINT fk_product_image FOREIGN KEY (product_id) REFERENCES PRODUCTOS (id)
+);
+
+-- Tabla 15: TRASLADOS
+CREATE TABLE TRASLADOS (
+    id             INTEGER       PRIMARY KEY,
+    origin_id      INTEGER       NOT NULL,
+    destination_id INTEGER      NOT NULL,
+    requested_date TIMESTAMP     NOT NULL,
+    arrive_date    TIMESTAMP     NOT NULL,
+    created_at     TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at     TIMESTAMP     DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_origin_movement FOREIGN KEY (origin_id) REFERENCES SEDES (id),
+    CONSTRAINT fk_destination_movement FOREIGN KEY (destination_id) REFERENCES SEDES (id)
+);
+
+-- Tabla 16: DETALLE_TRASLADO
+CREATE TABLE DETALLE_TRASLADO (
+    id                 INTEGER   PRIMARY KEY,
+    movement_id        INTEGER   NOT NULL,
+    product_id         INTEGER   NOT NULL,
+    quantity           INTEGER   NOT NULL,
+    created_at         TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at         TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_movement_movement FOREIGN KEY (movement_id) REFERENCES TRASLADOS (id),
+    CONSTRAINT fk_product_movement FOREIGN KEY (product_id) REFERENCES PRODUCTOS (id)
 );
