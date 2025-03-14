@@ -1,0 +1,170 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BC6EAA0F-ACD6-7AAB-FBB1-0607D323F474" name="clientes">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>0DD7763B-2533-C1C0-CB9A-969A69A446B4</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="8FDB5630-0870-6D56-21E7-3F06F6D10098">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>E92D208D-736E-E75F-5BA8-B7A22465CE68</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="national_document" id="597E3D25-0FDB-EF9B-6C43-CD22D2EB8744">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>7288AA13-5C8B-0E06-7307-1584947E2674</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="274845EC-1E9F-DF5F-26A2-61F5EE97D8E2">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>62B1D62B-5BA9-948B-7AA7-B922F85A8DCB</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lastname" id="5715E4D8-A3E3-8A5E-E34B-ECEDC4827573">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>19CF315F-105F-1CAF-C2EE-CED0C2F80C42</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="C3BCC477-6F35-9B8E-9751-4F6A3D8B48F3">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>5943F85A-5710-F77A-86DE-E3E27A212539</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone" id="27F74A79-C547-E3AD-F473-905CD3163B78">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>835D6B59-7BB6-CED6-8B08-1916494C0B79</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="active" id="240775A3-3C19-B9DC-55AD-B7C19940AB61">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>1F8538F1-458B-8610-7D89-39D89C8E1981</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="confirrmed_email" id="C857133F-1619-FCEB-0728-EBC3EB0A7349">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>AFD9317E-3695-B0D8-8DEA-F127CA49FD41</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address_id" id="DE4CB9F0-0310-B745-D6AA-8A7DC8802DE2">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>552EA8DC-972D-5296-ABB7-44A25C2C5D8B</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_method" id="12345428-36A1-43C8-EE37-0DCA79F8A18F">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>43EC7898-88F6-35E2-8EE2-1AB114F38593</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="307DE7CB-5FA7-CDF4-98FF-B650B7A62827">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>FD2B94D1-B2ED-48B7-7B40-4A00F6AECF0C</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="1E2A14A2-7780-B222-4E79-6E5E5211ACE5">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>03ED9BBC-F1F6-C030-5D84-08B1DC9A7BEC</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5B13D4BC-6635-7774-2CF1-217E63DD896B" name="clientes_PK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 13:53:03 UTC</createdTime>
+<generatorID>3B9AEDB2-9F5B-4CA7-7EF9-F1062BDB9A8A</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8FDB5630-0870-6D56-21E7-3F06F6D10098"/>
+<colUsage columnID="597E3D25-0FDB-EF9B-6C43-CD22D2EB8744"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

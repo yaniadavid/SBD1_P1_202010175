@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2C6DB6AC-AE61-D620-7F5B-8500FD69659E" name="inventario">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:52:10 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="EE16C546-6922-105E-41BE-99523384C50E">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:54:49 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="product_id" id="7C0B1946-F4E2-5C3A-6D91-39E6C6D65010">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:55:10 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="location_id" id="94C0E61A-6B09-D8F6-CF13-F493A1A241DE">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:55:22 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantity" id="BCDED6B2-6D27-E568-AA3C-08AC310C2B95">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:55:37 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created_at" id="DF74B41D-1737-37A1-4D97-C1FDDC8A2DF9">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:55:48 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="updated_at" id="F21C5DBA-D2DE-B3B6-1E08-FB6A7E546CE2">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:55:59 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sede_id" id="371B8F20-2626-54EC-D30C-8581740C4C42">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-14 22:58:57 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="36B1CC7C-F0D4-C1D1-E4F5-F0CB427B375E">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:42:53 UTC</createdTime>
+<generatorID>E466B920-10FB-F74C-C91B-9563E577E1A9</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<referedAttribute>BC91F3C2-8860-D57C-1762-3D2D7A5107F7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BEADC39F-EB0C-BAC1-CC78-77FE7C2D2C7B" name="inventario PK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:55:09 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EE16C546-6922-105E-41BE-99523384C50E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

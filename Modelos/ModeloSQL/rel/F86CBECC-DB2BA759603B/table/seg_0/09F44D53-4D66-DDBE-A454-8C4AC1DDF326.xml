@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09F44D53-4D66-DDBE-A454-8C4AC1DDF326" name="Detalle_Traslado">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>2FECE053-215D-59A1-E08D-850C442C351C</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="270C1F29-866E-9437-5668-A8EB6FCB5DA4">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>8FCC6BF9-9EE7-09F5-3B98-8F53EF0D71A1</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="traslado_id" id="42D8FE5B-9376-B22C-16F8-CE4F52AC98DA">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>64537DBD-6351-2DCE-9FD7-F86E052C12E4</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="product_id" id="10969DFD-53D1-EE62-2CD6-09F44556675B">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>A23CBAD5-BBA5-0A32-6D20-51A3AC14576A</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity" id="B439274E-E1EC-5C59-822D-9450A76C8FA9">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>AEEE479C-F781-AC44-30CA-287A64769272</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="030D84B2-888B-563E-FA21-6E8F811AB6A4">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>0C010115-025F-CF93-831D-3B57266B839C</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="5E93EC11-E437-D4E9-19AD-FE0AFB6AB3E6">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>3834C620-4A1A-5662-9DEC-25CE7C33E53E</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="traslados_id" id="A11816BD-1A4E-5DF4-1C92-207F12BB11EC">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>58F86793-C2E9-72D9-9BD6-C3706C198EAC</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A02FB4C-0BCC-2C43-6D52-041FDB06AE34" referredColumn="0D01EE81-99E4-9AE4-95FE-2A622B74B92C"/>
+</associations>
+</Column>
+<Column name="traslados_order_id" id="3E237D86-B9C6-9FB2-3311-C21AC27B91A8">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>D249981F-C3BE-7D98-6728-88AED20FDEBE</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A02FB4C-0BCC-2C43-6D52-041FDB06AE34" referredColumn="ACF35D40-65A7-533E-5E44-F9F271F77706"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0A6173F-F125-4BFB-DACD-7BD7D55E5A67" name="Detalle_Traslado_PK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>9994D6A6-41F7-1042-D8AA-6EF755C53071</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="270C1F29-866E-9437-5668-A8EB6FCB5DA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B6F3647-79FA-03E9-92A9-11FADE8C1E0A" name="Detalle_Traslado_traslados_FK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>2DEFE84A-4BCA-341A-462E-6CC39D56F6D3</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A11816BD-1A4E-5DF4-1C92-207F12BB11EC"/>
+<colUsage columnID="3E237D86-B9C6-9FB2-3311-C21AC27B91A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="56DDFB01-2246-AFD3-E2F5-BA2D87BB1B09" containerWithKeyObject="D86967ED-6863-9AFB-FF3F-E7419AA44964" localFKIndex="E078FC2D-FAF4-6E09-27AA-5FABC930820F" name="traslados_inventario_FK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>857C47F6-6845-7972-F6B3-468E8B6CFD12</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<referredTableLongName>inventario</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E4C6D110-BB84-3046-08A0-9579CABAA439</referredTableID>
+<keyObject>9F5D2F6C-4791-5D12-9AC9-841EAD542697</keyObject>
+<referredKeyID>9F5D2F6C-4791-5D12-9AC9-841EAD542697</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

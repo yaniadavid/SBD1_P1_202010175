@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="188F7F30-53D4-2C1A-29C0-240A979D65F3" name="envios">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:13:02 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="19CD4120-9BE2-E4EF-25B4-298129C60566">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:13:15 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_id" id="CE5C34FA-A0CF-BC83-E1C5-C7907C1A3E1E">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:13:28 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="address" id="A832C840-ED17-12EC-7B06-7FE49A084010">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:13:42 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="transport_company" id="32C14597-E80A-6DEE-3E10-7B4897F284C5">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:13:59 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tracking_id" id="AD4ED527-E3BA-4E25-9D71-C85EAD17DEC1">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:14:41 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="7D5C2B65-77C0-DD39-E3DA-DE24FBD40E02">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:20:04 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created_at" id="6E56F9FA-D930-290B-8086-D22EADB2A46B">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:20:22 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="updated_at" id="06594895-073A-78F4-0FAE-20845A5CEF21">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:20:46 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="D140E141-881C-5FA4-6D89-33C569365F9F">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:41:30 UTC</createdTime>
+<generatorID>CFE20DC8-D300-3EF3-35E5-373F003BFF70</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<referedAttribute>235F2845-57BD-B7AD-05BA-BDA8D5CD86F3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="client_id" id="23DE2F0F-EB11-5D81-4845-906A0E17A31A">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:41:30 UTC</createdTime>
+<generatorID>CFE20DC8-D300-3EF3-35E5-373F003BFF70</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="true"/>
+</engineerTo>
+<referedAttribute>85F12901-8F83-3008-0592-746757499E9F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9EDF820B-191E-F85C-FB5E-725060379C19" name="envios PK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:13:24 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="F86CBECC-7B87-991A-D4A8-DB2BA759603B" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>19CD4120-9BE2-E4EF-25B4-298129C60566</attributeRef>
+<attributeRef>CE5C34FA-A0CF-BC83-E1C5-C7907C1A3E1E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

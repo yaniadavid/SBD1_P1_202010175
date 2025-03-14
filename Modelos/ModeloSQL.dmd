@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ModeloSQL" id="8857578D-73C1-084A-D568-A560EBC381E5" version="3.5">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-11 06:20:08 UTC</createdTime>
+<ownerDesignName>P1_BD1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8857578D-73C1-084A-D568-A560EBC381E5</designId>
+</OSDM_Design>

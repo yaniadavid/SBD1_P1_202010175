@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F310BC3-742C-08D4-9EEE-38901F22CB9F" name="categoria">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>77CEE97A-07F0-6C2C-E5E2-01E795A44BD2</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C7A0C6A5-8507-31F8-6DC7-B25D3D1A3C72">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>4F925A8B-BD6D-92FE-C5A4-57C5A50748EA</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="4F026953-06F2-5FA9-B7EF-2FE7CC79FB62">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>CE3897D8-ABDC-9A7C-2E3A-92AB2078A7A3</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="7C27718C-F7A0-218E-33A7-04E0BDD43EB7">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>9479EADD-8BA8-C74D-3941-96D7BF268F1C</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="3BB5BD1E-DAC8-5484-22CE-2898DC120F27">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>E47038DD-CB65-3996-EDB3-8D6E5EB124A2</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4D868979-8190-4406-72E3-C7EBD2D79846" name="categoria_PK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>E49E9164-7C24-59CE-A1B0-F73806EEEE3B</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7A0C6A5-8507-31F8-6DC7-B25D3D1A3C72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

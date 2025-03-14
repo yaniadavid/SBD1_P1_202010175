@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="15A3436C-6571-0B1B-DF2D-A27250BC5B16" name="envios">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>188F7F30-53D4-2C1A-29C0-240A979D65F3</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="FD2C3FD9-7AD7-9537-94F3-053F55545EC8">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>19CD4120-9BE2-E4EF-25B4-298129C60566</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_id" id="F3866F80-2896-6359-16A5-46F121992FE0">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>CE5C34FA-A0CF-BC83-E1C5-C7907C1A3E1E</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="3C268ABA-17C2-2935-A428-A38419748A5B">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>A832C840-ED17-12EC-7B06-7FE49A084010</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="transport_company" id="FDD1EFFF-5745-CBA0-78F7-DB12CAFF2C91">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>32C14597-E80A-6DEE-3E10-7B4897F284C5</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tracking_id" id="F1AEA2EF-B81B-563D-7F1D-C22B055882CD">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>AD4ED527-E3BA-4E25-9D71-C85EAD17DEC1</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status" id="01BAADB2-31A9-5338-C65F-2BD1FDCC190F">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>7D5C2B65-77C0-DD39-E3DA-DE24FBD40E02</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="762583FE-27F8-83AF-3816-ED5F98A00281">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>6E56F9FA-D930-290B-8086-D22EADB2A46B</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="F07A8090-6428-BA38-B9C5-21C4EC64093B">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>06594895-073A-78F4-0FAE-20845A5CEF21</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="orden_de_compra_id" id="FB4948CD-A1AC-2F01-0E29-2C80DC7AD9C3">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>D140E141-881C-5FA4-6D89-33C569365F9F</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3816DE3C-4D29-4742-6A7B-15C49B63FC79" referredColumn="44392C41-D9C1-FBEA-A100-D11F0D9BD11A"/>
+</associations>
+</Column>
+<Column name="orden_de_compra_client_id" id="C4844A7C-A909-D4D3-14A3-942DB00E4917">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>23DE2F0F-EB11-5D81-4845-906A0E17A31A</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3816DE3C-4D29-4742-6A7B-15C49B63FC79" referredColumn="00497264-BE47-4ABB-3525-99322CFD8CC7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A548E01C-DA81-B021-422F-E841CC899E1C" name="envios_PK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>9EDF820B-191E-F85C-FB5E-725060379C19</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD2C3FD9-7AD7-9537-94F3-053F55545EC8"/>
+<colUsage columnID="F3866F80-2896-6359-16A5-46F121992FE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2484984A-C55D-DA21-7D91-851D0745D156" name="envios__IDX">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>CFE20DC8-D300-3EF3-35E5-373F003BFF70</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="FB4948CD-A1AC-2F01-0E29-2C80DC7AD9C3"/>
+<colUsage columnID="C4844A7C-A909-D4D3-14A3-942DB00E4917"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="177BC0DA-6C67-50D6-486E-0AAA66E6D865" name="envios_orden_de_compra_FK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>CFE20DC8-D300-3EF3-35E5-373F003BFF70</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB4948CD-A1AC-2F01-0E29-2C80DC7AD9C3"/>
+<colUsage columnID="C4844A7C-A909-D4D3-14A3-942DB00E4917"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

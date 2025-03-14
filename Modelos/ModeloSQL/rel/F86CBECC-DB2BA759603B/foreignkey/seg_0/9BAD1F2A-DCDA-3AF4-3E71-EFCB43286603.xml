@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9BAD1F2A-DCDA-3AF4-3E71-EFCB43286603" containerWithKeyObject="48989FB4-FE02-0B80-FBA7-9252A5BA3121" localFKIndex="F2AB75B5-D2C8-6FF2-208F-3A260FA1F074" name="detalle_orden_de_compra_orden_de_compra_FK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>19E1A4DD-DE5F-1AEA-B13C-0B5EB8539778</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<referredTableLongName>orden_de_compra</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2EF27421-499F-BE3F-53EB-EDC530064B86</referredTableID>
+<keyObject>76ED1FAE-7DED-8306-47DC-6BDBB5A4C55B</keyObject>
+<referredKeyID>76ED1FAE-7DED-8306-47DC-6BDBB5A4C55B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id,client_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

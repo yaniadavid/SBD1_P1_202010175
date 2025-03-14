@@ -1,0 +1,260 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2829F229-5013-05E9-A7C8-86B7BCB1E842" name="producto">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>85CDEECA-CEFA-5FAC-D7B7-230477A2BD3D</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="46C29159-6722-F706-CA96-02C9F6DE074A">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>F2E8D0D7-E5A8-C06F-57EF-628AC6DFCEE6</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sku" id="39D520F2-0F2B-2BFB-5C12-B92975341DB9">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>8B1E6629-88F4-91A8-2176-B16E94F1CC47</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="692CBB7A-7DB7-A7F6-1F24-898154E9CBC3">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>0F3077B3-F59B-1201-3226-68764FDABF34</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="E0966188-0567-E43F-6F00-C1925B96C976">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>80B42755-2BA8-A06E-F9A3-C2AAAD742E50</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="042DD9DB-809A-86BA-FD9E-5ADCB872EA0E">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>1CB77334-6138-E622-B6F1-56D2667B0286</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="slug" id="C7E5F78D-EB3D-57FC-2BDE-E3DEDA9EDD91">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>3FBB843E-5DE1-197C-F484-968D3B053319</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sede" id="15BE9EC6-3D9C-62DA-4FFB-909868B3EC85">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>8C132904-ACA5-1AC3-A093-BD9E4B4F0DBA</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="active" id="FF49359C-8E82-C91D-BB17-DC97905F02D1">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>A01B0522-414D-B077-DBBF-89F63A8D4854</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imagen_id" id="54FA18C0-BB34-26F2-2D76-777BE56CC022">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>9EFB91A5-7E28-4D4D-8078-9BEE6AA5434E</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="2BB4F40B-61D8-EAA2-FE2B-9D9384997133">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>1ED4283C-03D7-2C6A-B079-43C6FF10F7EF</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="595AC732-56CD-A359-FCF3-D24563BE6CAE">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>63265A60-E773-EB6B-B091-5496A8FCE9AA</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inventario_id" id="E56E9589-FEE4-E132-F9D1-5815C1067661">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>3EF69633-FA09-3246-2735-129E90A70764</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5CE957C8-4A87-8CE2-3D77-254278D7B5FA" referredColumn="54E11E23-86A6-2758-51E4-BE015C05F0A3"/>
+</associations>
+</Column>
+<Column name="imagen_url" id="51555091-02E8-6EFF-EF30-413515B7A66A">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>68CEC52B-9A8B-97F6-BF89-8D1DF1092875</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>350</dataTypeSize>
+<ownDataTypeParameters>350,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="categoria_id" id="C2FB8637-DC93-122D-CC1D-8C722BC76CFE">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>BAAC77F7-44A3-D955-A973-1D4BA483A0E8</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="45CE7D4A-0322-B21F-336A-A9A30582120A" referredColumn="C7A0C6A5-8507-31F8-6DC7-B25D3D1A3C72"/>
+</associations>
+</Column>
+<Column name="detalle_orden_de_compra_id" id="2C09B144-1BE7-8AB8-1A5A-0B2E7592ED68">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>BF0974C3-A1CB-B282-5265-C656D02A8BEA</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C51468C7-6B00-6056-E612-A792B6DC11D2" referredColumn="3093120B-5FBD-97B4-EB52-5E69AE271AF3"/>
+</associations>
+</Column>
+<Column name="detalle_orden_de_compra_order_id" id="8A42F9AF-67F9-01F8-869D-20F97DBA1BC0">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>69D0AC84-6B86-16DD-0CDA-09DD1F5A1734</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C51468C7-6B00-6056-E612-A792B6DC11D2" referredColumn="D356042F-F6D4-2A21-05E5-90FA9A96E15A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B57C3281-81C0-1902-0DC3-75F580EEF1CA" name="producto_PK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>32EC5F12-F439-B788-A7B6-C92756852CB8</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46C29159-6722-F706-CA96-02C9F6DE074A"/>
+<colUsage columnID="39D520F2-0F2B-2BFB-5C12-B92975341DB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="48FDE56B-CCCC-308B-B564-2C7AFC6B0BD8" name="producto_inventario_FK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>866ADF4A-FE80-59E3-3BE3-D746E414BE4B</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E56E9589-FEE4-E132-F9D1-5815C1067661"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0856E5E-C94B-9419-EA28-56525BC66543" name="producto_categoria_FK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:22:13 UTC</createdTime>
+<generatorID>FE9E0121-F50A-43D5-8B85-57ECE04A8C3A</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2FB8637-DC93-122D-CC1D-8C722BC76CFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D8699D9-3526-1AD9-F5F7-2D10D198E13E" name="producto_detalle_orden_de_compra_FK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-15 02:45:01 UTC</createdTime>
+<generatorID>93AB301A-41FC-C35E-18FD-B7F94FCF595A</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C09B144-1BE7-8AB8-1A5A-0B2E7592ED68"/>
+<colUsage columnID="8A42F9AF-67F9-01F8-869D-20F97DBA1BC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

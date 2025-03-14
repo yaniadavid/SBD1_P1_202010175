@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A487F3BF-569B-A304-D595-BD8C2594865A" containerWithKeyObject="37CA391B-C161-BC3F-FF2D-0A7F4E9F159E" localFKIndex="3FFC6155-09B9-0165-25BD-3CCBD38F327E" name="devolucion_inventario_FK">
+<createdBy>yania</createdBy>
+<createdTime>2025-03-12 04:57:32 UTC</createdTime>
+<generatorID>B2928403-A323-0F33-6778-30E43ABABE1D</generatorID>
+<ownerDesignName>ModeloSQL</ownerDesignName>
+<referredTableLongName>inventario</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E4C6D110-BB84-3046-08A0-9579CABAA439</referredTableID>
+<keyObject>9F5D2F6C-4791-5D12-9AC9-841EAD542697</keyObject>
+<referredKeyID>9F5D2F6C-4791-5D12-9AC9-841EAD542697</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
