@@ -635,7 +635,7 @@ Por estas razones, no fue necesario hacer cambios adicionales en esta etapa.
 
 ### Modelo Conceptual
 
-![Modelo Conceptual](img/Conceptual_3FN.png)
+![Modelo Conceptual](img/Conceptual3FN.png)
 
 Modelo Conceptual 3FN
 
