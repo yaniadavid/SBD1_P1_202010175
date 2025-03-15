@@ -1,151 +1,55 @@
-from typing import Optional
 import oracledb
-from pydantic import BaseModel
-from fastapi import FastAPI
+from flask_bcrypt import Bcrypt
 
-# MODELOS ---------------------------------------------------
-class Customer(BaseModel):
-    nationalId: int
-    name: str
-    lastname: str
-    email: str
-    phone: str
-    active: str
-    confirmed_email: int
+bcrypt = Bcrypt()
 
-class CustomerPatch(BaseModel):
-    nationalId: Optional[int] = None
-    name: Optional[str] = None
-    lastname: Optional[str] = None
-    email: Optional[str] = None
-    phone: Optional[str] = None
-    active: Optional[str] = None
-    confirmed_email: Optional[int] = None
+# Configuración de conexión a Oracle
+DB_USER = "SYSTEM"
+DB_PASSWORD = "bdp1"
+DB_DSN = "localhost:1521/FREE"
 
-# CONFIGURACIÓN DE LA APP -----------------------------------
-app = FastAPI()
+def actualizar_contraseñas():
+    try:
+        print("⏳ Conectando a la base de datos...")
+        conn = oracledb.connect(user=DB_USER, password=DB_PASSWORD, dsn=DB_DSN)
+        cursor = conn.cursor()
+        print("✅ Conectado correctamente.")
 
-# DSN - base de datos Oracle
-DSN = "C##SYSTEM/bdp1@localhost:1522/FREE"
+        # Obtener usuarios con contraseñas en texto plano
+        print("🔍 Buscando contraseñas sin hashear...")
+        cursor.execute("SELECT id, password FROM CLIENTES WHERE password NOT LIKE '$2%'")
+        usuarios = cursor.fetchall()
 
-# ENDPOINTS -------------------------------------------------
+        if not usuarios:
+            print("⚠ No hay contraseñas por actualizar.")
+            return
 
-# 1. Crear Cliente (POST /clients)
-# @app.post("/clients")
-# def create_client(customer: Customer):
-#     with oracledb.connect(DSN) as connection:
-#         cursor = connection.cursor()
-        
-#         # 1. Calcular nuevo ID (usando conteo de registros)
-#         cursor.execute("SELECT COUNT(*) FROM CUSTOMER")
-#         totalClients = cursor.fetchone()[0]
-#         new_id = totalClients + 1
+        print(f"🔄 Se encontraron {len(usuarios)} contraseñas sin hashear. Actualizando...")
 
-#         # 2. Insertar el nuevo cliente
-#         insert_query = """
-#             INSERT INTO CUSTOMER 
-#             (ID, NATIONAL_ID, NAME, LASTNAME, EMAIL, PHONE, ACTIVE, CONFIRMED_EMAIL) 
-#             VALUES (:id, :nationalId, :name, :lastname, :email, :phone, :active, :confirmed_email)
-#         """
-#         cursor.execute(insert_query, {
-#             "id": new_id,
-#             "nationalId": customer.nationalId,
-#             "name": customer.name,
-#             "lastname": customer.lastname,
-#             "email": customer.email,
-#             "phone": customer.phone,
-#             "active": customer.active,
-#             "confirmed_email": customer.confirmed_email
-#         })
-        
-#         connection.commit()
-#         return {"message": "Client created successfully", "id": new_id}
+        for user_id, plain_password in usuarios:
+            if plain_password:
+                # Hashear la contraseña correctamente
+                hashed_password = bcrypt.generate_password_hash(plain_password).decode('utf-8')
 
-# 2. Listar todos los clientes (GET /clients)
-@app.get("/clients")
-def list_clients():
-    with oracledb.connect(DSN) as connection:
-        cursor = connection.cursor()
-        cursor.execute("SELECT * FROM CUSTOMER")
+                # Actualizar en la base de datos
+                cursor.execute("UPDATE CLIENTES SET password = :1 WHERE id = :2", (hashed_password, user_id))
+                print(f"✅ Contraseña del usuario {user_id} actualizada.")
 
-        # Convertir filas a diccionarios
-        columns = [col[0] for col in cursor.description]  
-        data = []
-        for row in cursor:
-            data.append(dict(zip(columns, row)))
+        # Confirmar cambios en la base de datos
+        conn.commit()
+        print(f"🎉 Se actualizaron {len(usuarios)} contraseñas correctamente.")
 
-        return data
+    except Exception as e:
+        print(f"❌ Error al actualizar contraseñas: {e}")
 
-# 3. Obtener un cliente por ID (GET /clients/{client_id})
-@app.get("/clients/{client_id}")
-def get_client(client_id: int):
-    with oracledb.connect(DSN) as connection:
-        cursor = connection.cursor()
-        cursor.execute("SELECT * FROM CUSTOMER WHERE ID = :id", {"id": client_id})
+    finally:
+        # Cerrar cursor y conexión
+        if 'cursor' in locals() and cursor:
+            cursor.close()
+            print("🔒 Cursor cerrado.")
+        if 'conn' in locals() and conn:
+            conn.close()
+            print("🔒 Conexión cerrada.")
 
-        columns = [col[0] for col in cursor.description]
-        row = cursor.fetchone()
-        if row:
-            return dict(zip(columns, row))
-        else:
-            return {"message": "Client not found"}
-
-# 4. Actualizar parcialmente un cliente (PATCH /clients/{client_id})
-@app.patch("/clients/{client_id}")
-def update_client(client_id: int, customer: CustomerPatch):
-    with oracledb.connect(DSN) as connection:
-        cursor = connection.cursor()
-
-        # Construir la consulta dinámicamente
-        fields = []
-        params = {}
-
-        if customer.nationalId is not None:
-            fields.append("NATIONAL_ID = :nationalId")
-            params["nationalId"] = customer.nationalId
-
-        if customer.name is not None:
-            fields.append("NAME = :name")
-            params["name"] = customer.name
-
-        if customer.lastname is not None:
-            fields.append("LASTNAME = :lastname")
-            params["lastname"] = customer.lastname
-
-        if customer.email is not None:
-            fields.append("EMAIL = :email")
-            params["email"] = customer.email
-
-        if customer.phone is not None:
-            fields.append("PHONE = :phone")
-            params["phone"] = customer.phone
-
-        if customer.active is not None:
-            fields.append("ACTIVE = :active")
-            params["active"] = customer.active
-
-        if customer.confirmed_email is not None:
-            fields.append("CONFIRMED_EMAIL = :confirmed_email")
-            params["confirmed_email"] = customer.confirmed_email
-
-        if not fields:
-            return {"message": "No fields to update"}
-
-        query = f"UPDATE CUSTOMER SET {', '.join(fields)} WHERE ID = :id"
-        params["id"] = client_id
-
-        cursor.execute(query, params)
-        connection.commit()
-
-        return {"message": "Client updated successfully"}
-
-# 5. Eliminar (marcar como inactivo) un cliente (DELETE /clients/{client_id})
-@app.delete("/clients/{client_id}")
-def delete_client(client_id: int):
-    with oracledb.connect(DSN) as connection:
-        cursor = connection.cursor()
-        # Marcar como inactivo en lugar de borrar físicamente
-        cursor.execute("UPDATE CUSTOMER SET ACTIVE = 'N' WHERE ID = :id", {"id": client_id})
-        connection.commit()
-
-    return {"message": "Client deleted successfully"}
+# Ejecutar la actualización
+actualizar_contraseñas()

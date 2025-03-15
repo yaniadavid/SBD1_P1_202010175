@@ -1227,6 +1227,182 @@ CREATE TABLE DETALLE_TRASLADO (
 
 # <h1 align="center">Integración a la Base de Datos</h1>
 
-### Endpoints
+### Manual de Usuario - API de Usuarios y Productos
 
-Descripción de los endpoints
+## Introducción
+Este documento describe los endpoints disponibles en la API para la gestión de usuarios y productos, incluyendo los métodos HTTP, las rutas, los datos de entrada y salida, así como los posibles códigos de respuesta.
+
+---
+
+# 1. Gestión de Usuarios
+
+## 1.1 Probar la conexión a la base de datos
+- **Endpoint:** `GET /api/test`
+- **Descripción:** Obtiene una lista de clientes registrados en la base de datos.
+- **Respuestas:**
+  - `200 OK` - Retorna la lista de clientes.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 1.2 Crear Usuario
+- **Endpoint:** `POST /api/users`
+- **Entrada (JSON):**
+```json
+{
+  "name": "Kevin",
+  "lastname": "Molina",
+  "email": "kmolina@example.com",
+  "password": "123456",
+  "phone": "123456789",
+  "national_document": "12345678"
+}
+```
+- **Respuestas:**
+  - `200 OK` - Usuario creado exitosamente.
+  - `400 Bad Request` - Faltan datos obligatorios.
+  - `409 Conflict` - El email ya está registrado.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 1.3 Iniciar Sesión
+- **Endpoint:** `POST /api/users/login`
+- **Entrada (JSON):**
+```json
+{
+  "email": "kmolina@example.com",
+  "password": "123456"
+}
+```
+- **Respuestas:**
+  - `200 OK` - Inicio de sesión exitoso.
+  - `404 Not Found` - Usuario no encontrado.
+  - `401 Unauthorized` - Contraseña incorrecta.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 1.4 Obtener Perfil de Usuario
+- **Endpoint:** `GET /api/users/{id}`
+- **Respuestas:**
+  - `200 OK` - Retorna los datos del usuario.
+  - `404 Not Found` - Usuario no encontrado.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 1.5 Actualizar Usuario
+- **Endpoint:** `PUT /api/users/{id}`
+- **Entrada (JSON - campos opcionales):**
+```json
+{
+  "name": "Luis",
+  "phone": "987654321"
+}
+```
+- **Respuestas:**
+  - `200 OK` - Usuario actualizado correctamente.
+  - `400 Bad Request` - No se proporcionaron datos válidos.
+  - `404 Not Found` - Usuario no encontrado.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 1.6 Eliminar Usuario
+- **Endpoint:** `DELETE /api/users/{id}`
+- **Respuestas:**
+  - `200 OK` - Usuario desactivado correctamente.
+  - `404 Not Found` - Usuario no encontrado.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+---
+
+# 2. Gestión de Productos
+
+## 2.1 Listar Productos
+- **Endpoint:** `GET /api/products`
+- **Respuestas:**
+  - `200 OK` - Retorna la lista de productos.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 2.2 Obtener Detalle de Producto
+- **Endpoint:** `GET /api/products/{id}`
+- **Respuestas:**
+  - `200 OK` - Retorna los detalles del producto.
+  - `404 Not Found` - Producto no encontrado.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 2.3 Crear Producto
+- **Endpoint:** `POST /api/products`
+- **Entrada (JSON):**
+```json
+{
+  "sku": "PROD123",
+  "name": "Producto A",
+  "description": "Descripcion del producto",
+  "price": 100.5,
+  "slug": "producto-a",
+  "active": "T",
+  "category_id": 1
+}
+```
+- **Respuestas:**
+  - `200 OK` - Producto creado exitosamente.
+  - `400 Bad Request` - Faltan datos obligatorios o formato incorrecto.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 2.4 Actualizar Producto
+- **Endpoint:** `PUT /api/products/{id}`
+- **Entrada (JSON - campos opcionales):**
+```json
+{
+  "name": "Producto Actualizado",
+  "price": 150.0
+}
+```
+- **Respuestas:**
+  - `200 OK` - Producto actualizado correctamente.
+  - `400 Bad Request` - No se proporcionaron datos válidos.
+  - `404 Not Found` - Producto no encontrado.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 2.5 Eliminar Producto
+- **Endpoint:** `DELETE /api/products/{id}`
+- **Respuestas:**
+  - `200 OK` - Producto inactivado correctamente.
+  - `404 Not Found` - Producto no encontrado.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+---
+
+# 3. Gestión de Órdenes
+
+## 3.1 Crear Orden de Compra
+- **Endpoint:** `POST /api/orders`
+- **Respuestas:**
+  - `201 Created` - Orden creada exitosamente.
+  - `400 Bad Request` - Faltan datos obligatorios.
+  - `404 Not Found` - Usuario o producto no encontrado.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 3.2 Listar Órdenes de Compra
+- **Endpoint:** `GET /api/orders`
+- **Respuestas:**
+  - `200 OK` - Lista de órdenes.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 3.3 Obtener Detalle de Orden de Compra
+- **Endpoint:** `GET /api/orders/{id}`
+- **Respuestas:**
+  - `200 OK` - Detalle de la orden.
+  - `404 Not Found` - Orden no encontrada.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+---
+
+# 4. Gestión de Pagos
+
+## 4.1 Registrar Pago
+- **Endpoint:** `POST /api/payments`
+- **Respuestas:**
+  - `200 OK` - Pago registrado correctamente.
+  - `400 Bad Request` - Faltan datos obligatorios.
+  - `404 Not Found` - Orden no encontrada.
+  - `500 Internal Server Error` - Error en la base de datos.
+
+## 4.2 Consultar Pagos
+- **Endpoint:** `GET /api/payments`
+- **Respuestas:**
+  - `200 OK` - Lista de pagos.
+  - `500 Internal Server Error` - Error en la base de datos.
